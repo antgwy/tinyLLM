@@ -227,6 +227,20 @@ MiniMind2系列旧模型均经过权重映射+（微调训练）QKVO线性层校
 git clone https://github.com/jingyaogong/minimind.git
 ```
 
+## Mac modification
+
+```bash 
+cd trainer && python train_pretrain.py --device=mps
+```
+
+打开 macbook 自带的活动检视器，查看 GPU 使用率
+
+选择「自动测试」来看一下预训练模型的效果
+
+```bash
+python eval_model.py --model_mode=0 # 0代表测试pretrain模型
+```
+
 ## Ⅰ 测试已有模型效果
 
 ### 1.环境准备
